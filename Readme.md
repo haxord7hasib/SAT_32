@@ -1,7 +1,7 @@
 # ESP32 Sensor Server Project
 
 ## Description
-This project involves setting up an ESP32-based server to read data from various sensors including a DHT22 for temperature and humidity, an MPU6050 for gyroscope and accelerometer readings, and a BMP085 for barometric pressure and altitude.
+This project sets up an ESP32-based server to collect data from various sensors: DHT22 (temperature and humidity), MPU6050 (gyroscope and accelerometer), and BMP085 (barometric pressure and altitude). The server displays this data on a web page.
 
 ## Components
 - ESP32
@@ -10,34 +10,39 @@ This project involves setting up an ESP32-based server to read data from various
 - Adafruit BMP085 Barometric Pressure Sensor
 
 ## Circuit Connections
-Detail the connections as outlined above.
+Below is a list of connections between the ESP32 and each sensor:
+
+### DHT22 Sensor
+- VCC to 3.3V on ESP32
+- GND to GND
+- DATA to GPIO 26
+
+### Adafruit MPU6050
+- VCC to 3.3V on ESP32
+- GND to GND
+- SDA to SDA (GPIO 21)
+- SCL to SCL (GPIO 22)
+
+### Adafruit BMP085
+- VCC to 3.3V on ESP32
+- GND to GND
+- SDA to SDA (GPIO 21)
+- SCL to SCL (GPIO 22)
+
+## Connection Diagram
+Include a simple diagram here. (See instructions below on how to create and include the diagram)
 
 ## Setup and Installation
-1. **Arduino IDE Setup**:
-   - Install the necessary libraries (`DHT sensor library`, `Adafruit MPU6050`, `Adafruit BMP085`).
-   - Configure the ESP32 board on Arduino IDE.
-
-2. **Code Upload**:
-   - Connect the ESP32 to your computer.
-   - Open the provided code in Arduino IDE.
-   - Select the correct board and port.
-   - Upload the code to ESP32.
+Detailed steps for setting up the Arduino IDE, uploading the code, and connecting to the web server.
 
 ## Accessing the Sensor Data
-- Connect the ESP32 to a Wi-Fi network (details provided in the code).
-- Once connected, the ESP32 will start the server and display sensor data on a web page.
-- Access this data by navigating to `http://esp32.local` in a web browser.
+Instructions on how to access the sensor data through the web server.
 
 ## Troubleshooting
-- Ensure all connections are secure.
-- Check the serial monitor for any error messages.
-- Make sure the correct libraries are installed.
-
-## Additional Notes
-- The refresh rate and other parameters can be adjusted in the code.
+Common issues and solutions.
 
 ## Authors
-- [Your Name]
+Your Name
 
 ## License
-- This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the MIT License.
